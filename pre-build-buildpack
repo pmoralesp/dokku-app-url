@@ -5,4 +5,4 @@ APP="$1"
 
 echo "-----> Injecting APP_URL"
 APP_URL=$(dokku url $APP)
-dokku config:set $APP APP_URL="$APP_URL"
+dokku config:set --no-restart $APP APP_URL="$APP_URL"
